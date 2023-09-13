@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+  <style>
+        table{
+            height: 200px;
+            width: 500px;
+            border: 1px solid black;
+            text-align: center;
+            border-collapse: collapse;
+            margin:0 auto;
+        }
+
+        caption{
+            font-size: x-large;
+            font-weight: bolder;
+        }
+      
+        td{
+            width: 100px;
+            border: 1px solid black; 
+        }
+        
+        input{
+            width: 250px;
+            height: 30px;
+        }
+
+        button{
+            height: 40px;
+            width: 45px;
+        }
+    </style>
+
+<script>
+	
+function check(){
+	//return false;
+	
+
+	
+	let frm=document.frm;
+	let so_id=frm.so_id;
+	let so_name=frm.so_name;
+	let al_id=frm.al_id;
+	let mb_id=frm.mb_id;
+	let ly_id=frm.ly_id;
+	let sw_id=frm.sw_id;
+	
+	if(so_id.value==""){
+		alert("노래ID입력");
+		so_id.focus();
+		return false;
+	}
+
+	if(so_name.value==""){
+		alert("노래제목입력");
+		so_name.focus();
+		return false;
+	}
+	
+	if(al_id.value==""){
+		alert("앨범ID입력");
+		al_id.focus();
+		return false;
+	}
+	
+	if(mb_id.value==""){
+		alert("멤버ID입력");
+		mb_id.focus();
+		return false;
+	}
+	
+	if(ly_id.value==""){
+		alert("작사가ID입력");
+		ly_id.focus();
+		return false;
+	}
+	
+	if(sw_id.value==""){
+		alert("작곡가ID입력");
+		sw_id.focus();
+		return false;
+	}	
+	return true;
+}
+</script>
+</head>
+<body>
+
+<!--submit을 중지하고 싶을 때 사용할 수 있음 -->
+<form name="frm" action="SHINee노래등록register_action.jsp" method="post" onsubmit="return check()">	
+	<header>
+		<h1>샤이니 앨범 정보</h1>
+	</header>
+	
+	<nav>
+		<ul class = "upMenu">
+			<li class = "underMenu">앨범
+				<ul >
+					<li>조회</li>
+					<li>등록</li>
+				</ul>
+			</li>
+			<li class = "underMenu">곡
+				<ul >
+					<li>조회</li>
+					<li>등록</li>
+				</ul>
+			</li>
+            <li class = "underMenu">작곡가
+				<ul >
+					<li>조회</li>
+					<li>등록</li>
+				</ul>
+			</li>
+            <li class = "underMenu">작사가
+				<ul >
+					<li>조회</li>
+					<li>등록</li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+	
+	 <table>
+		 
+		<caption>노래 등록</caption>      
+            <tr>
+             	<td>노래ID</td>
+             	<td><input type="text" name="so_id"></td>         
+            </tr>
+            
+            <tr>
+             	<td>노래제목</td>
+             	<td><input type="text" name="so_name"></td>    
+            </tr>
+            
+            <tr>
+             	<td>앨범ID</td>
+             	<td><input type="text" name="al_id"></td>    
+            </tr>
+
+            <tr>
+                <td>멤버ID</td>
+                <td><input type="text" name="mb_id"></td>       
+           </tr>
+
+           <tr>
+                <td>작사가ID</td>
+                <td><input type="text" name="ly_id"></td>        
+           </tr>
+
+           <tr>
+                <td>작곡가ID</td>
+                <td><input type="text" name="sw_id"></td>   
+           </tr>
+
+            <tr>
+                <td colspan="2">
+                    <button>등록</button>  
+                </td>
+                      
+            </tr>
+            
+    </table>
+</form>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<script>
+	
+	function send(){
+		$.ajax({
+			type: "get",
+			dataType: "json",
+			url:"/prj_09_6/movie2",
+			success:function(data){
+				alert(data);
+				console.log(data);
+				console.log(data.name);
+				
+				//$("#result").html( data.name);				
+				document.querySelector("#result").innerHTML=data.name;
+				
+				
+			},
+			error:function(){
+				alert("영화 순위를 불러올 수 없습니다");
+			}
+		}
+	);
+}
+	</script>
+</head>
+<body>
+
+	<button onclick="send()">영화순위</button>
+	
+	<div id="result"></div>
+	
+</body>
+</html>

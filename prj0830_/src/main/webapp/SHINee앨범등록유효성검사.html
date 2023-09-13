@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+	
+function check(){
+	//return false;
+	
+	let frm=document.frm;
+	let al_id=frm.al_id;
+	let al_name=frm.al_name;
+	let al_date=frm.al_date;
+	
+	if(al_id.value==""){
+		alert("앨범ID입력");
+		so_id.focus();
+		return false;
+	}
+
+	if(al_name.value==""){
+		alert("앨범명입력");
+		so_name.focus();
+		return false;
+	}
+	
+	if(al_date.value==""){
+		alert("발매일입력");
+		al_id.focus();
+		return false;
+	}
+	
+	return true;
+}
+</script>
+</head>
+<body>
+	
+<form>
+	<!--submit을 중지하고 싶을 때 사용할 수 있음 -->
+	<form name="frm" action="SHINee앨범등록register_action" method="post" onsubmit="return check()">	
+	<!--앨범ID 입력-->
+	<input type="text" name="al_id">
+	<!--앨범명 입력-->
+	<input type="text" name="al_name">
+	<!--발매일 입력-->
+	<input type="text" name="al_date">  
+	<button>등록</button>	
+</form>
+</body>
+</html>

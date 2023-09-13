@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+	
+function check(){
+	//return false;
+	
+	let frm=document.frm;
+	let so_id=frm.so_id;
+	let so_name=frm.so_name;
+	let al_id=frm.al_id;
+	let mb_id=frm.mb_id;
+	let ly_id=frm.ly_id;
+	let sw_id=frm.sw_id;
+	
+	if(so_id.value==""){
+		alert("노래ID입력");
+		so_id.focus();
+		return false;
+	}
+
+	if(so_name.value==""){
+		alert("노래제목입력");
+		so_name.focus();
+		return false;
+	}
+	
+	if(al_id.value==""){
+		alert("앨범ID입력");
+		al_id.focus();
+		return false;
+	}
+	
+	if(mb_id.value==""){
+		alert("멤버ID입력");
+		mb_id.focus();
+		return false;
+	}
+	
+	if(ly_id.value==""){
+		alert("작사가ID입력");
+		ly_id.focus();
+		return false;
+	}
+	
+	if(sw_id.value==""){
+		alert("작곡가ID입력");
+		sw_id.focus();
+		return false;
+	}
+	return true;
+}
+</script>
+</head>
+<body>
+	
+<form>
+	<!--submit을 중지하고 싶을 때 사용할 수 있음 -->
+	<form name="frm" action="SHINee노래등록register_action" method="post" onsubmit="return check()">	
+	<!--노래ID 입력-->
+	<input type="text" name="so_id">
+	<!--노래제목 입력-->
+	<input type="text" name="so_name">
+	<!--앨범ID 입력-->
+	<input type="text" name="al_id">
+	<!--멤버ID 선택-->
+	<input type="text" name="mb_id">
+	<!--작사가ID 선택-->
+	<input type="text" name="ly_id">   
+	<!--작곡가ID 선택-->
+	<input type="text" name="sw_id">   
+	<button>등록</button>	
+</form>
+</body>
+</html>

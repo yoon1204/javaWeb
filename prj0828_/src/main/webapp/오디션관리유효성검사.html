@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+	
+function check(){
+	//return false;
+	
+	let frm=document.frm;
+	let userid=frm.userid;
+	let username=frm.username;
+	let userbirth=frm.userbirth
+	let usergender=frm.usergender
+	let userspecialty=frm.userspecialty
+	let usercharm=frm.usercharm
+	
+	if(userid.value==""){
+		alert("아이디입력");
+		userid.focus();
+		return false;
+	}
+
+	if(username.value==""){
+		alert("이름입력");
+		username.focus();
+		return false;
+	}
+	
+	if(userbirth.value==""){
+		alert("생년월일입력");
+		userbirth.focus();
+		return false;
+	}
+	
+	if(usergender.value==""){
+		alert("성별선택");
+		usergender.focus();
+		return false;
+	}
+	
+	if(userability.value==""){
+		alert("실력무대선택");
+		userability.focus();
+		return false;
+	}
+	
+	if(usercharm.value==""){
+		alert("매력무대입력");
+		usercharm.focus();
+		return false;
+	}
+	return true;
+}
+</script>
+</head>
+<body>
+	
+	<!--submit을 중지하고 싶을 때 사용할 수 있음 -->
+	<form name="frm" action="HY오디션register_action" method="post" onsubmit="return check()">	
+	<!--아이디 입력-->
+	<input type="text" name="userid">
+	<!--이름 입력-->
+	<input type="text" name="username">
+	<!--생년월일 입력-->
+	<input type="text" name="userbirth">
+	<!--성별 선택-->
+	<input type="radio" name="usergender">
+	<input type="radio" name="usergender">
+	<!--실력무대 선택-->
+	<Select name="specialty">
+		<option>선택하세요</option>
+		<option value="V">보컬</option>
+		<option value="D">댄스</option>
+		<option value="R">랩</option>
+	</Select>     
+	<!--매력무대 선택-->
+	<input type="text" name="usercharm">
+	<button>저장</button>	
+	<button>취소</button>	
+</form>
+</body>
+</html>

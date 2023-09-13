@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+	
+function check(){
+	//return false;
+	
+	let frm=document.frm;
+	let sw_id=frm.sw_id;
+	let sw_name=frm.sw_name;
+	
+	
+	if(sw_id.value==""){
+		alert("작곡가ID입력");
+		sw_id.focus();
+		return false;
+	}
+
+	if(sw_name.value==""){
+		alert("작곡가이름입력");
+		sw_name.focus();
+		return false;
+	}
+	
+	return true;
+}
+</script>
+</head>
+<body>
+	
+<form>
+	<!--submit을 중지하고 싶을 때 사용할 수 있음 -->
+	<form name="frm" action="SHINee작곡가등록register_action" method="post" onsubmit="return check()">	
+	<!--작사가ID 입력-->
+	<td><input type="text" name="sw_id"></td>
+	<!--작사가이름 입력-->
+	<td><input type="text" name="sw_id"></td>
+	<button>등록</button>	
+</form>
+</body>
+</html>

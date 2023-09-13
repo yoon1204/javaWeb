@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+	<script>
+		function changeCss(){
+			alert("글자색변경");
+			let div=document.querySelector("#wrap");
+			div.style.color="red";
+		}
+		function changeCss2(){
+			alert("배경색변경");
+			$("#wrap").css("background-color", "yellow");
+		}
+		function changeCss3(){
+			alert("글자색변경");
+			let div=document.querySelector("#wrap");
+			div.style.color="green";
+		}
+		
+		
+	</script>
+</head>
+<body>
+
+<h2> 3개의 버튼은 자바스크립와 jquery를 이용하여 클릭시  div내용의 칼라가 변경되도록 하기 ! </h2>
+
+<h2>동적으로 이벤트처리하기 자바스크립트 , jquery </h2>
+<button id="btn1" onclick="changeCss()">버튼R</button>
+<button id="btn2" onclick="changeCss2()">버튼G</button>
+<button id="btn3" onclick="changeCss3()">버튼B</button>
+
+<div id="wrap"> front </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+	
+function check(){
+	//return false;
+	
+	let frm=document.frm;
+	let ly_id=frm.ly_id;
+	let ly_name=frm.ly_name;
+	
+	
+	if(ly_id.value==""){
+		alert("작사가ID입력");
+		ly_id.focus();
+		return false;
+	}
+
+	if(ly_name.value==""){
+		alert("작사가이름입력");
+		ly_name.focus();
+		return false;
+	}
+	
+	return true;
+}
+</script>
+</head>
+<body>
+	
+<form>
+	<!--submit을 중지하고 싶을 때 사용할 수 있음 -->
+	<form name="frm" action="SHINee작사가등록register_action" method="post" onsubmit="return check()">	
+	<!--작사가ID 입력-->
+	 <td><input type="text" name="ly_id"></td>  
+	<!--작사가이름 입력-->
+	 <td><input type="text" name="ly_id"></td>  
+	<button>등록</button>	
+</form>
+</body>
+</html>
