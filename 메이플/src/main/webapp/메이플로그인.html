@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link href="./css/mp_login.css" rel="stylesheet" />
+
+<script>
+	function check() {
+		//return false;
+		let frm = document.frm;
+		let userid = frm.userid;
+		let userpw = frm.userpw;
+
+		if (userid.value == "") {
+			alert("아이디 입력");
+			userid.focus();
+			return false;
+		}
+		if (userpw.value == "") {
+			alert("비밀번호 입력");
+			userpw.focus();
+			return false;
+		}
+		return true;
+	}
+</script>
+
+</head>
+<body>
+    <div class="jy_total">
+      <div class="jy_header">
+        <img
+          src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxOTA2MTlfNiAg%2FMDAxNTYwOTM2MjQxMzI4.SAlK9isM8cN1vdR7T0NW4EN11IhBZU3uWdUiAhy-a58g.mI2lSk9zVLsz6pc86xlTd2IFvJ7-schFayhrJxl4Qz0g.PNG.sgsoundpower%2F4.png&type=sc960_832"
+        />
+      </div>
+
+      <div class="jy_wrap">
+        <div class="jy_body">
+          <form
+            id="login-form"
+            name="frm"
+            action="카테고리.jsp"
+            method="post"
+            onsubmit="return check()"
+          >
+            <div class="inputwrap">
+              <input
+                placeholder="아이디 입력"
+                class="a"
+                type="text"
+                name="userid"
+              />
+              <input
+                placeholder="비밀번호 입력"
+                class="a"
+                type="text"
+                name="userpw"
+              />
+            </div>
+            <button>로그인</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,84 @@
+@charset "UTF-8";
+     .jy_total {
+        position: relative;
+        width: 100%;
+           border-top: 8px solid #ed9a39;
+    margin-top: -8px;
+        /* border: 1px solid black; */
+        font-family: "돋움", Dotum, "맑은 고딕", "Malgun Gothic", "Apple Gothic",
+          sans-serif;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      
+        
+      }
+      .jy_wrap {
+        border: solid 2px var(--GRAY125S, #e5e5e5);
+        width: 580px;
+        justify-content: space-between;
+        margin: 0 auto;
+        display: block;
+      }
+      .jy_header {
+        /* border: 1px solid black; */
+        margin: 0 auto;
+        width: 550px;
+        margin-bottom: 10px;
+      }
+      .jy_header > img {
+        width: 350px;
+        height: 200px;
+        margin-top: 59px;
+        margin-bottom: 51px;
+      }
+
+      .jy_body {
+        width: 600px;
+        /* border: solid 2px var(--GRAY125S, #e5e5e5); */
+        /* border: 1px solid black; */
+        border-radius: 2px;
+        margin: 0 auto;
+        font-family: "Apple SD Gothic Neo", "Noto Sans KR", "맑은 고딕",
+          "Malgun Gothic", 돋움, Dotum, sans-serif;
+      }
+      #login-form {
+        display: flex;
+        flex-direction: column;
+        margin: 70px 68px;
+      }
+      .inputwrap {
+        /* border: 1px solid black; */
+        display: block;
+      }
+
+      #login-form input {
+        padding: 20px 2px;
+        border: 0 solid black;
+        font-size: 18px;
+        border-bottom: 1px solid rgba(0, 0, 0, 1);
+        margin-bottom: -10px;
+        transition: border-color 0.3s ease-in-out;
+      }
+
+      #login-form input:not([type="submit"]) {
+        border-bottom: 1px solid rgba(0, 0, 0, 1);
+        transition: border-color 0.3s ease-in-out;
+      }
+
+      #login-form input::placeholder {
+        color: rgba(0, 0, 0, 1);
+        border: none;
+      }
+
+      button {
+        width: 440px;
+        height: 60px;
+        background-color: #ed9a39;
+        margin-bottom: 10px;
+        border: none;
+        border-radius: 7px;
+        margin: 0 auto;
+        margin-top: 55px;
+        font-size: 25px;
+      }

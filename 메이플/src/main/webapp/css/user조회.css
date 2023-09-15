@@ -1,0 +1,56 @@
+@charset "UTF-8";
+*{
+	margin :0px auto;
+}
+.jy_total {
+        position: relative;
+        width: 100%;
+           border-top: 8px solid #ed9a39;
+    margin-top: 0px;
+        /* border: 1px solid black; */
+        font-family: "돋움", Dotum, "맑은 고딕", "Malgun Gothic", "Apple Gothic",
+          sans-serif;
+        justify-content: center;
+        align-items: center;
+        text-align: center;      
+      }
+h2{
+	text-align: center;
+    margin-bottom: 100px;
+       margin-top: 100px;
+    font-size: 60px;
+}
+
+.jy_body{
+	margin: 0 auto;
+	display: flex;
+	width: 500px;
+}
+  .jy_wrap {
+        border: solid 2px var(--GRAY125S, #e5e5e5);
+        width: 550px;
+        justify-content: space-between;
+        margin: 0 auto;
+        display: block;
+        height: 250px;
+      }
+
+ .btn{
+    width: 95px;
+    height: 50px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background-color:#ed9a39;
+    color: white;
+    margin-top: 93px;
+}
+.backimage{
+	width: 300px;
+	height: 200px;
+	background-image: url("https://www.gametrics.com/GameTricsUpFiles/GameTitleFiles/adv.JPG");
+	background-size: cover;
+	margin-top: 40px;
+}
+
+
