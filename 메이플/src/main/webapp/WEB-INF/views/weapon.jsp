@@ -102,8 +102,7 @@
 		}
 		%>
 	</table>
-	<form name="frm" action="상품관리.jsp
-" method="post"
+	<form name="frm" action="상품관리.jsp" method="post"
 					onsubmit="return check()">
 					<button class = "btn">홈으로</button>
 				</form>

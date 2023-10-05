@@ -1,3 +1,4 @@
+
 package Board;
 
 import java.io.IOException;
@@ -9,15 +10,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/memo")
+@WebServlet("/register")
 public class MemoRegisterServlet extends HttpServlet{
-
-	@Override
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		BoardMemoService m=new BoardMemoService();
-		ArrayList<BoardMemo> list=m.getSelectAll();
-		//등록
-		req.setAttribute("list", list);
-		req.getRequestDispatcher("WEB-INF/views/memo.jsp").forward(req, resp);
-	}
+	
+@Override
+protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {	
+	
+	 String contents = req.getParameter("contents");	 
+	 System.out.println( contents);
+	
+//	BoardMemoService m=new BoardMemoService();
+//	ArrayList<BoardMemo> list=m.getSelectAll();
+//	//등록
+//	req.setAttribute("list", list);
+//	req.getRequestDispatcher("WEB-INF/views/memoRegister.jsp").forward(req, resp);
+}
 }

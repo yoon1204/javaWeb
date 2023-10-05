@@ -19,13 +19,10 @@ public class FoodServlet5 extends HttpServlet{
 		
 		//json 관련 라이브러리
 		resp.setCharacterEncoding("utf-8");
-		resp.setContentType("text/html;charset=utf-8");		
+		resp.setContentType("text/html;charset=utf-8");	
 		
 		FoodService service=new FoodService();
 		JSONArray arr = service.getFoodRealList();
-		resp.getWriter().println(arr);
-		
-		
-		
+		resp.getWriter().println(arr);	
 	}
 }

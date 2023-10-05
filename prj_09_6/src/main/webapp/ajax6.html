@@ -10,12 +10,14 @@
 		//alert("dkdkfkfjdg");		
 		// $.ajax();  (  ) 인자정보를  객체타입으로 제공함 		
 		$.ajax(  {
-			type: "get",
-			dataType: "json" ,
-			url: "/prj_09_6/food5"  ,			
+			type: "get",//또는 post
+			dataType: "json",//또는 text
+						//가져온 데이터의 형식
+			url: "/prj_09_6/food5",	//food5는 FoodServlet5의 매핑		
 			success: function( data){
 				alert(data);				
-				console.log(data);	
+				console.log(data);
+				//실제로 가져온 데이터	
 			 
 				
 				//음식정보 테이블에 tr로 추가하기	
@@ -24,8 +26,9 @@
 					let item = data[i];
 					//let str ="<tr><td>"+item.name+"</td><td>"+ item.price+"</td> </tr>";
 			         let str =`<tr><td> ${item.name}</td><td>  ${ item.price} </td> </tr>`;					
-	
+					//FoodService에 있는 key값 (name, price)
 					$("#result").append(str);
+					//html에 태그를 넣음
 				}	 				
 				 			
 			},
@@ -47,6 +50,6 @@
 	<button onclick="send()">음식정보</button>
 	
 	<table id="result">  </table>
-
+	//html에 태그를 넣으면 table에 추가됨
 </body>
 </html>

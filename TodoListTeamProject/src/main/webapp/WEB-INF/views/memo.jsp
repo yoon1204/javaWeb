@@ -36,6 +36,7 @@ margin-left:610px;
 margin-top:30px;
 }
 </style>
+
 </head>
 
 
@@ -52,19 +53,29 @@ margin-top:30px;
 	<tr>
 		<td><%=m.getM_code() %></td>
 		<td><%=m.getM_contents() %></td>
-		<td><button>수정</button><button>삭제</button></td>
+		<td>
+		
+		<form action ="<%=request.getContextPath()%>/MemoModifyServlet" method="get">
+			<button>수정</button>
+		</form>
+		<form action ="<%=request.getContextPath()%>/MemoDeleteServlet" method="get">	
+			<button>삭제</button>
+		</form>
+		</td>
 	</tr>
 
 
 <%} %>
+
 </table>
 
- 		<div class="Reg">
-			<input type="text">
-			<button>등록</button>         
+ 		
+	
+	<div class="Reg">
+ 			<form action ="<%=request.getContextPath()%>/register" method="get">
+			<input type="text"  name="contents"></input><button>등록</button>    
+			</form>     
         </div>
-	
-	
 
 
 

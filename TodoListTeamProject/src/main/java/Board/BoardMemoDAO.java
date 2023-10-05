@@ -58,6 +58,26 @@ public class BoardMemoDAO {
 		return list;
 	}
 	
+	public void memoInsert(String m_code, String m_contents) {
+		// db연결
+		Connection con=dbcon();
+		// sql작성
+		String sql="insert into acorntbl values(?,?)";
+		PreparedStatement pst=null;
+		try {
+			// sql실행
+			pst=con.prepareStatement(sql);
+			pst.setString(1, m_code);
+			pst.setString(2, m_contents);			
+			pst.executeUpdate();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		// 연결해제
+		close(pst,con);
+	}
+	
 	
 	public void close(AutoCloseable...a) {
 		for(AutoCloseable item:a) {
@@ -79,3 +99,4 @@ public class BoardMemoDAO {
 		
 	}
 }
+	

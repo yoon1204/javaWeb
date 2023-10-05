@@ -7,8 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<h2> 회원정보가 수정 되었습니다.</h2>
+	
+	<%
+	String c = (String) request.getAttribute("id");
+	%>
 
-<h2>회원정보가 수정되었습니다</h2>
-
+	아이디:<%=c%>
 </body>
 </html>

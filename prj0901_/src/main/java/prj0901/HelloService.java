@@ -1,9 +1,12 @@
 package prj0901;
 
 public class HelloService {
-
-	
-	public String getMessage() {
-		return "퐈이야";
+		
+	public String getMessage(){
+		
+		return "ㅋㅋ";
+		
 	}
+	
+	
 }
